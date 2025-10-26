@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "private": true,
+  "description": "@11ty/eleventy site",
+  "main": "index.js",
+  "scripts": {
+    "blog:build": "eleventy",
+    "blog:start": "eleventy --serve",
+    "blog:dev": "eleventy --serve --watch",
+    "blog:clean": "rm -rf _site",
+    "blog:prepare_release": "bash ./scripts/create_release.sh",
+    "prettier:write": "npx prettier . --write"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "latest",
+    "prettier": "^2.8.8"
+  },
+  "author": "",
+  "license": "MIT"
+}

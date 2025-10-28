@@ -1,0 +1,117 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Root and body styles */
+html {
+    background-image: url('/images/background.jpg');
+    background-attachment: fixed;
+    background-size: 25%;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body {
+    background-color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    max-width: 800px;
+    align-self: center;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Link styles */
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:active {
+    color: red;
+}
+
+/* Main content styles */
+#main-content {
+    flex-grow: 1;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 10pt;
+    background-color: lightgray;
+    border-top: 2px ridge greenyellow;
+}
+
+/* Under construction tape styles */
+.under-construction-tape {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    overflow: hidden;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 14pt;
+}
+
+/* Accessible replacement for marquee */
+.scrolling-text {
+    animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Header styles */
+.under-construction-header {
+    font-size: 28pt;
+    text-align: center;
+}
+
+.purple-wordart-wrapper {
+    filter: drop-shadow(3px 3px 0px violet);
+}
+
+.purple-wordart {
+    background: linear-gradient(180deg, blue 10%, hotpink 70%);
+    background-clip: text;
+    color: transparent;
+    font-family: "Impact", "Arial Black", sans-serif;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Motion sickness handling */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disable marquee */
+    .scrolling-text {
+        animation: none;
+    }
+
+    /* Disable drop shadow */
+    .purple-wordart-wrapper {
+        filter: none;
+    }
+}

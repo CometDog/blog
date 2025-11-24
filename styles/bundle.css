@@ -1,117 +1,187 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Root and body styles */
 html {
-    background-image: url('/images/background.jpg');
-    background-attachment: fixed;
-    background-size: 25%;
-    background-repeat: repeat;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  background-image: url("/images/background.jpg");
+  background-attachment: fixed;
+  background-size: 25%;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 body {
-    background-color: white;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 12pt;
-    max-width: 800px;
-    align-self: center;
-    color: black;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  width: calc(100% - 200px);
+  max-width: 1200px;
+  margin: 0 auto;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Link styles */
 a:link {
-    color: blue;
+  color: blue;
 }
 
 a:visited {
-    color: purple;
+  color: purple;
 }
 
 a:active {
-    color: red;
+  color: red;
 }
 
 /* Main content styles */
 #main-content {
-    flex-grow: 1;
+  flex-grow: 1;
+}
+
+/* Breadcrumbs styles */
+.breadcrumbs {
+  padding: 15px 20px;
+  font-size: 10pt;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Blog post list styles */
+.post-list {
+  padding: 20px;
+}
+
+.post-summary {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.post-summary h2 {
+  margin-bottom: 5px;
+}
+
+.post-summary time {
+  color: #666;
+  font-size: 10pt;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post-summary p {
+  margin: 10px 0;
+}
+
+/* Individual post styles */
+.post {
+  padding: 20px;
+}
+
+.post-header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+}
+
+.post-header h1 {
+  margin-bottom: 10px;
+}
+
+.post-header time {
+  color: #666;
+  font-size: 10pt;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  line-height: 1.6;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.post-content p {
+  margin-bottom: 15px;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+/* Tag styles */
+.post-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding: 3px 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+  font-size: 9pt;
 }
 
 /* Footer styles */
 footer {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
+  font-size: 10pt;
+  background-color: lightgray;
+  border-top: 2px ridge greenyellow;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 1000px) {
+  body {
+    width: calc(100% - 100px);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    background-size: 50%;
+  }
+
+  body {
+    width: calc(100% - 30px);
+    font-size: 11pt;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    background-size: 75%;
+  }
+
+  body {
     font-size: 10pt;
-    background-color: lightgray;
-    border-top: 2px ridge greenyellow;
-}
+    margin: 0 10px;
+  }
 
-/* Under construction tape styles */
-.under-construction-tape {
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    overflow: hidden;
-    font-family: "Arial Black", Arial, sans-serif;
-    font-size: 14pt;
-}
-
-/* Accessible replacement for marquee */
-.scrolling-text {
-    animation: scroll-left 15s linear infinite;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Header styles */
-.under-construction-header {
-    font-size: 28pt;
-    text-align: center;
-}
-
-.purple-wordart-wrapper {
-    filter: drop-shadow(3px 3px 0px violet);
-}
-
-.purple-wordart {
-    background: linear-gradient(180deg, blue 10%, hotpink 70%);
-    background-clip: text;
-    color: transparent;
-    font-family: "Impact", "Arial Black", sans-serif;
-    display: inline-block;
-    font-weight: bold;
-}
-
-/* Motion sickness handling */
-@media (prefers-reduced-motion: reduce) {
-
-    /* Disable marquee */
-    .scrolling-text {
-        animation: none;
-    }
-
-    /* Disable drop shadow */
-    .purple-wordart-wrapper {
-        filter: none;
-    }
+  footer {
+    font-size: 9pt;
+    padding: 8px;
+  }
 }

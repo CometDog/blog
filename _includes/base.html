@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} - James Downs</title>
-    <link rel="stylesheet" href="/styles/bundle.css">
-</head>
+    <link rel="stylesheet" href="/styles/bundle.css" />
+  </head>
 
-<body>
-    <header role="banner">
-        <nav role="navigation" aria-label="Main navigation">
-            <a href="/" aria-current="{% if page.url == '/' %}page{% endif %}">Home</a>
-        </nav>
-    </header>
-
-    <main id="main-content" role="main">
-        {{ content }}
-    </main>
+  <body>
+    <main id="main-content" role="main">{{ content }}</main>
 
     <footer role="contentinfo">
-        <p>&copy; 2025 James Downs</p>
+      <p>&copy; 2025 James Downs</p>
     </footer>
-</body>
-
+  </body>
 </html>
